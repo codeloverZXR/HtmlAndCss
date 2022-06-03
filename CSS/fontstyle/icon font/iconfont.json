@@ -1,0 +1,58 @@
+{
+  "id": "3329238",
+  "name": "myfont",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "28900881",
+      "name": "计划",
+      "font_class": "jihua",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "28900926",
+      "name": "任务管理",
+      "font_class": "renwuguanli",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "28900994",
+      "name": "审批中心",
+      "font_class": "shenpizhongxin",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "28901097",
+      "name": "数据管理",
+      "font_class": "shujuguanli",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "28901156",
+      "name": "管理",
+      "font_class": "guanli",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "28901332",
+      "name": "数据中心",
+      "font_class": "shujuzhongxin",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "28901415",
+      "name": "标签市场",
+      "font_class": "biaoqianshichang",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    }
+  ]
+}

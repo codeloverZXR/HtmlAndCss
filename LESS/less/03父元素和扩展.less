@@ -1,0 +1,39 @@
+//选中父元素
+.box01{
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  // &表示外层的父元素元素
+  &:hover{
+    background-color: red;
+   .box02{
+     background-color: blue;
+   }
+  }
+}
+// 样式的继承
+.p1{
+  width: 100px;
+  height: 100px;
+  color: gold;
+}
+//.p2继承了.p1的一些样式并在自身进行了一些扩展
+.p2:extend(.p1){
+  color: black;
+}
+
+// mixin 混合
+// 直接对指定的样式进行引用，相当于将.p1进行了复制引用
+.p3{
+  .p1()
+}
+// 可通过在类选择其后面添加()的形式生成一个mixins混合函数，该函数不会
+// 给这个类添加样式，而是可以像正常函数那样被后面的选择器调用
+.p4(){
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+.p5{
+  .p4()
+}

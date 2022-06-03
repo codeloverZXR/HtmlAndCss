@@ -1,0 +1,240 @@
+/* 头部 */
+.header {
+  /* 隐藏元素相对于整个header定位，这样设置width=100%会铺满整个屏幕 */
+  position: relative;
+}
+
+.header-main {
+  width: 1226px;
+  margin: 0 auto;
+  height: 100px;
+  /* background-color: aqua;    */
+  font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+}
+
+.header-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  background-image: url('../img/logo/xiaomilogo.png');
+  background-size: contain;
+  float: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.header-list {
+  float: left;
+  /* background-color: red;      */
+  margin-left: 120px;
+  margin-top: 12px;
+}
+
+/* 设置下拉框弹出 */
+/* .header-list:hover .header-hidden {
+  border-top: 1px #E0E0E0 solid;
+  height: 201px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
+} */
+.showinggoods:hover~.header-hidden,
+.header-hidden:hover {
+  border-top: 1px #E0E0E0 solid;
+  height: 201px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, .3);
+}
+
+/* .active{
+  height: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+} */
+
+.header-list .nav {
+  float: left;
+}
+
+.nav li {
+  float: left;
+  /* height: 88px; */
+  margin-right: 20px;
+  line-height: 88px;
+}
+
+.nav li:hover a {
+  color: red;
+}
+
+.nav li a {
+  display: block;
+  font-size: 16px;
+  color: #333333;
+}
+
+.header-search {
+  float: right;
+  margin: 25px 0;
+}
+
+.header-search .iconfont {
+  width: 52px;
+  height: 52px;
+  float: right;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  border: 1px #E0E0E0 solid;
+  background-color: white;
+}
+
+/* 添加鼠标移入搜索框特效 */
+.header-search input:hover,
+.header-search input:hover+.iconfont {
+  outline: 1px black solid;
+}
+
+/* 添加输入框聚焦颜色特效 */
+.header-search input:focus,
+.header-search input:focus+.iconfont {
+  outline: 1px orange solid;
+}
+
+/* 添加搜索按钮移入特效 */
+.header-search .iconfont:hover {
+  background-color: #FF6A00;
+  color: white;
+}
+
+.header-search input {
+  width: 230px;
+  height: 50px;
+  border: 1px #E0E0E0 solid;
+  border-right: none;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #919191;
+  outline: none;
+}
+
+/* header-hidden */
+.header-hidden {
+  /* height: 201px; */
+  width: 100%;
+  background-color: white;
+  /* border-top: 1px #E9EAEA solid; */
+  position: absolute;
+  z-index: 9999;
+  top: 100px;
+  left: 0px;
+  /* display: none; */
+  /* 设置动画 */
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+
+/* 左侧商品栏 */
+.goods-list {
+  position: absolute;
+  z-index: 999;
+  left: 18px;
+  width: 234px;
+  height: 460px;
+  margin-top: 88px;
+  background-color: #9E9C9C;
+  /* 设置动画效果 */
+  /* height: 0px;
+  overflow: hidden;
+  transition: height 0.3s; */
+}
+.goods-list li:first-child{
+  margin-top: 20px;
+}
+.goods-list li {
+  background-color: #9E9C9C;
+  width: 234px;
+  height: 42px;
+  float: none;
+  margin-right: 0px;
+  line-height: 42px;
+}
+
+.goods-list li a {
+  font-size: 14px;
+  font-family: Helvetica Neue, Helvetica, Arial,
+    Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  color: rgb(255, 255, 255);
+  /* box-sizing: border-box; */
+  padding-left: 30px;
+}
+.goods-list li a:hover{
+  background-color: #FF6700;
+  color: rgb(255, 255, 255);
+}
+.goods-list li a:hover .iconfont{
+  color: #FFB98A;
+}
+
+.goods-list li .iconfont {
+  float: right;
+  margin-right: 20px;
+}
+
+/* 鼠标移入全部商品的goods-list-hidden */
+.goods-list-hidden{
+  position: absolute;
+  z-index: 999;
+  left: 18px;
+  width: 234px;
+  height: 460px;
+  margin-top: 88px;
+  background-color: white;
+   /* 设置动画效果 */
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s;
+}
+.goods-list-hidden li:first-child{
+  margin-top: 20px;
+}
+.goods-list-hidden  li {
+  background-color: white;
+  width: 234px;
+  height: 42px;
+  float: none;
+  margin-right: 0px;
+  line-height: 42px;
+}
+
+.goods-list-hidden  li a {
+  font-size: 14px;
+  font-family: Helvetica Neue, Helvetica, Arial,
+    Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+  color: #333333;
+  /* box-sizing: border-box; */
+  padding-left: 30px;
+}
+.goods-list-hidden  li a:hover{
+  background-color: #FF6700;
+  color: rgb(255, 255, 255);
+}
+.goods-list-hidden li a:hover .iconfont{
+  color: #FFB98A;
+}
+
+.goods-list-hidden  li .iconfont {
+  float: right;
+  margin-right: 20px;
+}
+/* 设置鼠标移入全部商品显示goods-list-hidden */
+ .allgoods:hover ~ .goods-list-hidden{
+  height: 460px;
+  outline: 1px #FF6700 solid;
+}
+.goods-list-hidden:hover{
+  height: 460px;
+  outline: 1px #FF6700 solid;
+  box-shadow: 3px 0 5px rgba(0, 0, 0, .3);
+} 

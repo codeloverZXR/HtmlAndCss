@@ -1,0 +1,79 @@
+{
+  "id": "3353342",
+  "name": "taobaopc",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1304843",
+      "name": "飞猪旅行",
+      "font_class": "feizhulvhang",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "1712172",
+      "name": "金币",
+      "font_class": "jinbi",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "2006621",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "3843475",
+      "name": "色卡",
+      "font_class": "seqia",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "4368679",
+      "name": "天猫",
+      "font_class": "tm",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4788005",
+      "name": "今日爆款",
+      "font_class": "jinribaokuan",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "13760354",
+      "name": "天猫超市",
+      "font_class": "tianmaochaoshi",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "14803437",
+      "name": "吃面",
+      "font_class": "chimian",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
+      "icon_id": "15463154",
+      "name": "拍卖,拍卖锤,拍卖行,拍卖锤",
+      "font_class": "paimai-paimaichui-paimaihang-paimaichui",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "23301620",
+      "name": "天猫国际",
+      "font_class": "tianmaoguoji",
+      "unicode": "e6b9",
+      "unicode_decimal": 59065
+    }
+  ]
+}

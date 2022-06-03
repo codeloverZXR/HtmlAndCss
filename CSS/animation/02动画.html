@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 700px;
+      height: 700px;
+      background-color: #bfa;
+    }
+     /* 设置关键帧 */
+     @keyframes test {
+        /* from表示动画开始时，该元素的状态也可以使用0%来声明 */
+        from{
+          margin-left:0px;
+        }
+        /* to 表示动画结束时元素所处于的状态 */
+        to{
+          margin-left:500px;
+        }
+      }
+    .box02{
+      width: 100px;
+      height: 100px;
+      background-color: aqua;
+      margin-left: 200px;
+      /* 
+        动画和过渡类似，都是可以实现一些动态的效果
+        不同的是过渡需要在某个属性变化时才会触发（通常需要引入某种事件），动画可以自动触发动态效果
+        设置动画效果，必须要先设置一个关键帧，关键帧设置了动画执行的每一个步骤 
+      */
+     
+      /* 设置动画 */
+      /* animation-name:test;指明要执行动画的关键帧名称 */
+      animation-name:test;
+
+      /* 指明完成一次动画效果所用的时间 */
+      animation-duration:4s;
+
+      /* 设置动画延时 */
+      animation-delay:2s;
+
+      /* 设置动画执行方式，和过渡transition类似 */
+      animation-timing-function:ease-in-out;
+
+      /* 设置动画执行的次数 
+      可选值：次数 或 infinite无限次*/
+      animation-iteration-count:infinite;
+
+      /* 指定动画运行的执行方向
+      可选值：
+        normal 默认值 从from向to运行 每次都是依此方式
+        reverse 从to向from运行，每次都是依此方式
+        alternate 从from向to运行 若设置动画执行次数大于2，即要重复执行
+        该动画时，则会从to向from反向执行，以此类推
+        alternate-reverse 从to向from运行 重复执行动画时反向执行
+      */
+      animation-direction:alternate;
+
+      /* 设置动画的填充模式
+      默认值：
+        none 默认值 元素在动画开始执行前和动画执行完毕后都处于自己原来的状态（注意，不是to的状态）
+        forwards 动画执行完毕后，元素会添加from的属性和值并一直保持（动画执行后状态保持）
+        backwords 动画开始执行前，元素就会添加to的属性和值,但执行完毕后，元素会恢复自己原来的状态而不会添加to的属性状态（动画执行前状态保持）
+        both 结合了forwards 和 backwoods两种属性
+        */
+      animation-fill-mode: both;
+      /* 是否开启动画
+      paused关闭
+      running执行（默认值） */
+      animation-play-state:running;
+      /* 通常情况下 我们一般只采用animation一个属性来设置动画，用法和transition一致 */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box01">
+    <div class="box02"></div>
+  </div>
+</body>
+</html>

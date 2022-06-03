@@ -1,0 +1,30 @@
+// 定义可以传参数的minxins混合函数
+.fun1(@a,@b,@c){
+  width: @a;
+  height: @b;
+  background-color: @c;
+}
+.box01{
+  // 传参方式一：按照定义变量顺序，顺序传参
+  // .fun1(100px,200px,red);
+  // 传参方式二：根据参数名进行传参
+  .fun1(@c:red,@b:200px,@a:300px);
+}
+// 也可以给minxins混合函数指定参数的默认值
+.fun2(@a:700px, @b:800px, @c:blue){
+  width: @a;
+  height: @b;
+  background-color: @c;
+}
+.box02{
+  .fun2();
+}
+// 此外，less本身也提供了很多混合函数
+span{
+  // 求两个颜色之间的中间色
+  color: average(red,blue);
+}
+div{
+  // 求出指定颜色加深多少之后的颜色
+  background-color: darken(#bfa,10%);
+}

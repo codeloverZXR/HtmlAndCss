@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 100px;
+      height: 100px;
+      background-color: #bfa;
+      margin: 100px auto;
+      transition: all 3s;
+      /* 修改变形原点，默认值为center 即几何中心 */
+      transform-origin: 20px 20px;
+    }
+    .box01:hover{
+      transform: scale(2);
+      /* 
+      对元素进行缩放 transfrom:scale;
+              scaleX() 水平方向进行缩放
+              scaleY() 垂直方向进行缩放
+              scale() 双方向进行缩放
+              本质就是对X 和 Y 轴进行缩放
+      */
+    }
+    .box02{
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+    }
+    .box02:hover img{
+      transform: scale(1.4);
+    }
+    .box02 img{
+      width: 100%;
+      height: 100%;
+      transition: 3s;
+    }
+    .box03{
+      width: 200px;
+      height: 200px;
+      background-image: url(./动画练习/img02/02.jpg);
+      transition: all 3s;
+    }
+    .box03:hover{
+      transform: scale(1.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="box01"></div>
+  <!-- 利用变形缩放对实现选中图片放大 -->
+  <div class="box02">
+    <img src="./动画练习/img02/01.jpg" alt="">
+  </div>
+  <div class="box03"></div>
+</body>
+</html>

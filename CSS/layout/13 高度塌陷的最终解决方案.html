@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box01{
+      border: 10px red solid;
+    }
+    .box02{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      float: left;
+    }
+    /* 解决方案：利用::after伪元素为父元素
+    添加空文本行内元素，并使其忽略浮动元素对
+    该伪元素的影响，再将其改为块元素即可 */
+    .box01::after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="box01">
+    <div class="box02">
+
+    </div>
+  </div>
+</body>
+</html>

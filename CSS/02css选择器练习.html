@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      div{
+        width: 100px;
+        height: 100px;
+        background-color: black;
+      }
+      div.box01{
+        background-color: red;
+      }
+      .box01,.box02,.box03{
+        background-color: aqua;
+      }
+
+      /* ul:nth-child(n){
+        color: aqua;
+      } */
+      /* 区分 */
+      /* ul > :nth-child(n){
+        color: red;
+      } */
+
+      /* 需求：去除第一个子元素样式 */
+      /* ul:nth-child(n):not(:first-child){
+        color: rebeccapurple;
+      } */
+      /* 正确写法 */
+      /* ul >:nth-child(n):not(:first-child){
+        color: aqua;
+      } */
+      
+      
+      /* 区分  */
+      /* ul > :first-child{
+        color: red;
+      } */
+      /* ul >:first-of-type{
+        color: blueviolet;
+      } */
+      /* ul > li:first-of-type{
+        color: blue;
+      } */
+
+      /* p::first-letter{
+        font-size: larger;
+        color: blue;
+      } */
+      p::first-line{
+        color: blueviolet;
+      }
+      p::before{
+        content: '[';
+        color: blue;
+      }
+      p::after{
+        content: ']';
+        color: blue;
+      }
+      p::selection{
+        color: aqua;
+      }
+  </style>
+</head>
+<body>
+  <div></div>
+  <br>
+  <div class="box01"></div>
+  <br>
+  <div class="box02"></div>
+  <br>
+  <div class="box03"></div>
+
+  <ul>
+    <span>begin</span>
+    <li>第一个</li>
+    <li>第二个</li>
+    <li>第三个</li>
+    <li>第四个</li>
+    <li>第五个</li>
+  </ul>
+  <p>对于问题一，传参的方法对于多层嵌套的组件将会非常繁琐，并且对于兄弟组件间的状态传递无能为力。对于问题二，我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式非常脆弱，通常会导致无法维护的代码。
+    因此，我们为什么不把组件的共享状态抽取出来，以一个全局单例模式管理呢？在这种模式下，我们的组件树构成了一个巨大的“视图”，不管在树的哪个位置，任何组件都能获取状态或者触发行为！
+    通过定义和隔离状态管理中的各种概念并通过强制规则维持视图和状态间的独立性，我们的代码将会变得更结构化且易维护。
+    这就是 Vuex 背后的基本思想，借鉴了 Flux、Redux 和 The Elm Architecture。与其他模式不同的是，Vuex 是专门为 Vue.js 设计的状态管理库，以利用 Vue.js 的细粒度数据响应机制来进行高效的状态更新。</p>
+</body>
+</html>

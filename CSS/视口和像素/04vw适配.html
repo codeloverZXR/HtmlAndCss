@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    html{
+      /*
+      由于网页中，字体的大小最小为12px
+      不能设置一个比12px还小的字体
+      如果我们设置了一个比12px还小的字体，则会默认为12px
+      0.13333333vw = 1px（设计图像素）
+      5.3333vw = 1rem =  40px（设计图像素）   
+       */
+      font-size: 5.3333vw;
+    }
+    /* 在移动端创建一个设计图中80*80像素的盒子 */
+    .box01{
+      width: 2rem;
+      height: 2rem;
+      background-color: aqua;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    利用html的font-size属性结合rem完成vm适配
+   -->
+   <div class="box01"></div>
+</body>
+</html>

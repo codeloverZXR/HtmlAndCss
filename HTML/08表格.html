@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 通过table标签来创建一个表格 -->
+  <table border>
+    <!-- 在table中使用tr标签表示表格中的一行，有几个tr就有几行 -->
+    <tr>
+      <!-- 在tr中使用td标签表示一个单元格，有几个td这一行中就有几个单元格 -->
+      <td>星期一</td>
+      <td>星期二</td>
+      <td>星期三</td>
+    </tr>
+    <tr>
+      <td rowspan="2">hello</td>
+      <!-- 使用rowspan来指明这个单元格纵向占几个单元格-->
+      <td>code</td>
+      <td>word</td>
+    </tr>
+    <tr>
+      <td colspan="2">A</td>
+      <!-- 使用rowspan来指明这个单元格横向占几个单元格-->
+    </tr>
+  </table>
+</body>
+</html>

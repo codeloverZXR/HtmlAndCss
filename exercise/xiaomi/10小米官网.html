@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小米商城</title>
+  <!-- 引入图标字体 -->
+  <link rel="stylesheet" href="img/icon/iconfont.css">
+  <!-- 引入顶部导航条 -->
+  <link rel="stylesheet" href="./css/topnav.css">
+  <!-- 引入头部 -->
+  <link rel="stylesheet" href="./css/header.css">
+  <!-- 引入中间幻灯片 -->
+  <link rel="stylesheet" href="./css/banner.css">
+  <!-- 引入右侧导航条 -->
+  <link rel="stylesheet" href="./css/right-nav.css">
+  <!-- 引入广告栏 -->
+  <link rel="stylesheet" href="./css/advertisement.css">
+  <!-- 设置网站的图标（在标题栏和收藏栏） 
+    -网站图片一般都存储在网站的根目录下，名字一般叫做favicon.ico
+  -->
+  <link rel="icon" href="./img/logo/favicon.ico">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 1000px;
+      /* 设置网页最小宽度，避免网页缩放造成元素溢出 */
+      min-width: 1226px;
+      /* background-color: black; */
+    }
+
+    /* 清除高度塌陷 */
+    .clearfix::before,
+    .clearfix::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- topnav -->
+  <div class="topnav">
+    <div class="mainnav clearfix">
+      <div class="topnav-left">
+        <ul>
+          <li><a href="javascript:;">小米商城</a></li>
+          <span></span>
+          <li><a href="javascript:;">MIUI</a></li>
+          <span></span>
+          <li><a href="javascript:;">IoT</a></li>
+          <span></span>
+          <li><a href="javascript:;">云服务</a></li>
+          <span></span>
+          <li><a href="javascript:;">天星数科</a></li>
+          <span></span>
+          <li><a href="javascript:;">有品</a></li>
+          <span></span>
+          <li><a href="javascript:;">小爱开放平台</a></li>
+          <span></span>
+          <li><a href="javascript:;">企业团购</a></li>
+          <span></span>
+          <li><a href="javascript:;">资质证照</a></li>
+          <span></span>
+          <li><a href="javascript:;">协议规则</a></li>
+          <span></span>
+          <li>
+            <a href="javascript:;" class="appdownload">下载app
+              <!-- 添加弹出层 -->
+              <div class="appdownload-hidden">
+                <img src="./img/logo/appdownload.png" alt="">
+                <p>小米商城APP</p>
+              </div>
+            </a>
+          </li>
+          <span></span>
+          <li><a href="javascript:;">Select Location</a></li>
+        </ul>
+      </div>
+      <div class="topnav-right">
+        <ul>
+          <li><a href="javascript:;">登录</a></li>
+          <span></span>
+          <li><a href="javascript:;">注册</a></li>
+          <span></span>
+          <li><a href="javascript:;">消息通知</a></li>
+        </ul>
+        <div class="shoppingcar">
+          <a href="javascript:;"><i class="iconfont shopicon">&#xe73d;</i>购物车（0） </a>
+          <!-- 添加购物车弹出层 -->
+          <div class="shoppingcar-hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- header -->
+  <div class="header">
+    <div class="header-main clearfix">
+      <a href="https://www.mi.com/index.html" class="header-logo"></a>
+      <div class="header-list">
+        <ul class="nav">
+          <li class="allgoods"><a href="javascript:;">全部商品分类</a></li>
+          <!-- 商品左侧列表 -->
+          <ul class="goods-list">
+            <li>
+              <a href="javascript:;">
+                手机
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                电视
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                笔记本 平板
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                家电
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                出门 穿戴
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                智能 路由器
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                电源 配件
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                健康 儿童
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                耳机 音响
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                生活 箱包
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+          </ul>
+          <ul class="goods-list-hidden">
+            <li>
+              <a href="javascript:;">
+                手机
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                电视
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                笔记本 平板
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                家电
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                出门 穿戴
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                智能 路由器
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                电源 配件
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                健康 儿童
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                耳机 音响
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                生活 箱包
+                <i class="iconfont">&#xe62d;</i>
+              </a>
+            </li>
+          </ul>
+          <li class="showinggoods"><a href="javascript:;">Xiaomi手机</a></li>
+          <li class="showinggoods"><a href="javascript:;">Redmi 红米</a></li>
+          <li class="showinggoods"><a href="javascript:;">电视</a></li>
+          <li class="showinggoods"><a href="javascript:;">笔记本</a></li>
+          <li class="showinggoods"><a href="javascript:;">平板</a></li>
+          <li class="showinggoods"><a href="javascript:;">家电</a></li>
+          <li class="showinggoods"><a href="javascript:;">路由器</a></li>
+          <li class="notshowing"><a href="javascript:;">服务</a></li>
+          <li class="notshowing"><a href="javascript:;">社区</a></li>
+          <ul class="header-hidden"></ul>
+        </ul>
+
+      </div>
+      <div class="header-search">
+        <form action="javascript:;"></form>
+        <input type="text" name="search" value="洗衣机">
+        <button type="submit" class="iconfont">&#xe86e;</button>
+      </div>
+    </div>
+  </div>
+  <!-- banner -->
+  <div class="banner">
+    <div class="banner-main">
+      <a href="javascript:;" class="banner-img imgactive">
+        <img src="./img/bannerimg/banner01.jpg" alt="">
+      </a>
+      <a href="javascript:;" class="banner-img">
+        <img src="./img/bannerimg/banner02.webp" alt="">
+      </a>
+      <a href="javascript:;" class="banner-img">
+        <img src="./img/bannerimg/banner03.webp" alt="">
+      </a>
+      <a href="javascript:;" class="banner-img">
+        <img src="./img/bannerimg/banner04.webp" alt="">
+      </a>
+      <a href="javascript:;" class="banner-img">
+        <img src="./img/bannerimg/banner05.webp" alt="">
+      </a>
+      <a href="javascript:;" class="banner-img">
+        <img src="./img/bannerimg/banner06.webp" alt="">
+      </a>
+      <div class="beforeimg">
+        <a href="javascript:;">
+          <i class="iconfont">&#xe667;</i>
+        </a>
+      </div>
+      <div class="img-nav clearfix">
+        <a class="img-nav-a aactive" href="javascript:;"></a>
+        <a class="img-nav-a" href="javascript:;"></a>
+        <a class="img-nav-a" href="javascript:;"></a>
+        <a class="img-nav-a" href="javascript:;"></a>
+        <a class="img-nav-a" href="javascript:;"></a>
+        <a class="img-nav-a" href="javascript:;"></a>
+      </div>
+      <div class="nextimg">
+        <a href="javascript:;">
+          <i class="iconfont">&#xe602;</i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- 右侧导航条 -->
+  <div class="rightnav">
+    <div class="rightnav-phone iconfont">
+      <a href="javascript:;" class="iconfont">&#xe603;</a>
+    </div>
+    <div class="rightnav-owner">
+      <a href="javascript:;" class="iconfont">&#xe8a0;</a>
+    </div>
+    <div class="rightnav-setting">
+      <a href="javascript:;" class="iconfont">&#xe61b;</a>
+    </div>
+    <div class="rightnav-help">
+      <a href="javascript:;" class="iconfont">&#xec2e;</a>
+    </div>
+    <div class="rightnav-shopcar">
+      <a href="javascript:;" class="iconfont">&#xe73d;</a>
+    </div>
+  </div>
+  <div class="ad clearfix">
+    <div class="leftapptation">
+      <div class="list-top clearfix">
+        <a href="javascript:;">
+          <i class="iconfont">&#xe67e;</i>
+          <p>保障服务</p>
+        </a>
+        <a href="javascript:;">
+          <i class="iconfont">&#xe894;</i>
+          <p>企业团购</p>
+        </a>
+        <a href="javascript:;">
+          <i class="iconfont">&#xe601;</i>
+          <p>F码通道</p>
+        </a>
+      </div>
+
+      <div class="list-bottom clearfix">
+        <a href="javascript:;">
+          <i class="iconfont">&#xe895;</i>
+          <p>米粉卡</p>
+
+        </a>
+        <a href="javascript:;">
+          <i class="iconfont">&#xe646;</i>
+          <p>以旧换新</p>
+        </a>
+        <a href="javascript:;">
+          <i class="iconfont">&#xe600;</i>
+          <p>话费充值</p>
+        </a>
+      </div>
+
+    </div>
+    <ul class="ad-list">
+      <li>
+        <a href="javascript:;">
+          <img src="./img/ad/ad01.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./img/ad/ad02.jpg" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <img src="./img/ad/ad03.jpg" alt="">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- js实现幻灯片全部功能 -->
+  <script>
+    // 获取所有图片
+    const bannerImg = document.getElementsByClassName("banner-img")
+    // 获取所有导航按钮
+    const imgNavA = document.getElementsByClassName("img-nav-a")
+    // 获取上一张图片按钮
+    const beforeImg = document.getElementsByClassName('beforeimg')[0]
+    // 获取下一张图片按钮
+    const nextImg = document.getElementsByClassName('nextimg')[0]
+    let index = 0
+    let imgLength = bannerImg.length
+    console.log(imgLength)
+
+    //将清除所有imgactive类和aactive类方法抽取为函数
+    function removeAllactive() {
+      for (let j = 0; j < imgLength; j++) {
+        bannerImg[j].classList.remove("imgactive")
+        imgNavA[j].classList.remove("aactive")
+      }
+    }
+
+    //将自动轮播抽取为一个函数的返回值
+    function imgChanging() {
+      return setInterval(() => {
+        index++
+        if (index == imgLength) {
+          index = 0
+          // 清除所有图片的active类
+          removeAllactive()
+        }
+        console.log(index)
+        // 添加active类以使它显示
+        bannerImg[index].classList.add("imgactive")
+        imgNavA[index].classList.add("aactive")
+        //去除前一个img-nav-a标签的aactive类
+        if (index > 0) {
+          imgNavA[index - 1].classList.remove("aactive")
+        }
+      }, 5000);
+    }
+
+    //开启定时器自动轮播
+    let timer = imgChanging()
+
+    //点击导航按钮切换图片
+    for (let i = 0; i < imgLength; i++) {
+      imgNavA[i].onclick = function () {
+        //关闭定时器
+        clearInterval(timer)
+        //清除所有imgactive类和aactive类
+        removeAllactive()
+        //修改正在显示图片的值
+        index = i
+        //添加被点击a标签和对应图片标签的相应类
+        bannerImg[index].classList.add("imgactive")
+        imgNavA[index].classList.add("aactive")
+        //打开定时器
+        timer = imgChanging()
+      }
+    }
+
+    // 上一张图片
+    beforeImg.addEventListener('click', function () {
+      //关闭定时器
+      clearInterval(timer)
+      //修改index
+      index--
+      //限制index
+      if (index < 0) {
+        index = imgLength - 1
+      }
+      //清除所有imgactive类和aactive类
+      removeAllactive()
+      //显示index图片
+      bannerImg[index].classList.add("imgactive")
+      imgNavA[index].classList.add("aactive")
+      //打开定时器
+      timer = imgChanging()
+    })
+
+    // 下一张图片
+    nextImg.addEventListener('click', function () {
+      //关闭定时器
+      clearInterval(timer)
+      //修改index
+      index++
+      //限制index
+      if (index == imgLength) {
+        index = 0
+      }
+      //清除所有imgactive类和aactive类
+      removeAllactive()
+      //显示index图片
+      bannerImg[index].classList.add("imgactive")
+      imgNavA[index].classList.add("aactive")
+      //打开定时器
+      timer = imgChanging()
+    })
+    //细节：当鼠标移入图片时，轮播图关闭，移出时，轮播图打开
+    for (let i = 0; i < imgLength; i++) {
+      // bannerImg[i].onmouseover = function(){
+      //   console.log("轮播图关闭")
+      //   clearInterval(timer)
+      // }
+      // bannerImg[i].onmouseout = function(){
+      //   console.log("轮播图打开")
+      //   timer = imgChanging()
+      // }
+      bannerImg[i].addEventListener('mouseover', function () {
+        console.log("轮播图关闭")
+        clearInterval(timer)
+      })
+      bannerImg[i].addEventListener('mouseout', function () {
+        console.log("轮播图打开")
+        timer = imgChanging()
+      })
+    } 
+  </script>
+  <!-- <script>
+    const headerHidden = document.getElementsByClassName('header-hidden')
+    const notshowing = document.getElementsByClassName('notshowing')
+    for(let i = 0; i < notshowing.length; i++){
+      notshowing[i].onmouseover = function () {
+        console.log('in'+ i)
+        headerHidden[0].classList.add('active')
+      }
+      notshowing[i].onmouseout = function () {
+        console.log('out'+ i)
+        headerHidden[0].classList.remove('active')
+      }
+    }
+  </script> -->
+</body>
+
+</html>

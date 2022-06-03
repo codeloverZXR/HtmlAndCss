@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      垂直外边距的重叠（折叠）
+        相邻的元素在垂直方向上，外边距会发生重叠的现象（特指上外边距和下外边距）
+        两种情况：
+          兄弟元素之间：
+            兄弟元素之间：
+              例：上面元素的下外边距和下面元素的上外边距
+                情况一：两个值都是正值
+                  相邻的垂直外边距会取两者之间较大的那个值
+                情况二：两个值一正一负
+                  相邻的垂直外边距会取两者之间的和
+                情况三：两个值都是负值
+                  相邻的垂直外边距会取两者之间绝对值较大的那个
+              注：该情况往往有利于开发，不需要进行处理
+          
+          父子元素之间：
+              例：父子元素相邻指的是父元素没有设置任何边框和内边距，导致两者的边缘贴在了一起
+                  父子元素间由于紧贴相邻导致了父子元素公用一个上外边距
+              注：父子外边距的折叠会影响到页面的整体布局，必须要进行处理
+
+    */
+    .box01{
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      margin-bottom: 10px;
+    }
+    .box02{
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      margin-top: 10px;
+    }
+    .dad{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      margin-top: 30px;
+    }
+    .son{
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box01"></div>
+  <div class="box02"></div>
+
+  <div class="dad">
+    <div class="son">
+
+    </div>
+  </div>
+</body>
+</html>

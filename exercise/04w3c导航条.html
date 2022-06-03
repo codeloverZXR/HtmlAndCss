@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      height: 2000px;
+    }
+    .box01{
+      /* 要用margin: 50px auto;方式居中，一定要设置一下元素的宽高 */
+      width: 1162px;
+      height: 48px;
+      margin: 50px auto;
+      border-bottom: 1px black solid;
+      /* position: sticky;
+      top: 0px; */
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+    .box02{
+      height: 48px;
+      width: 166px;
+      float: left;
+      background-color: #E8E7E3;
+      color: #80807F;
+    }
+    p{
+      /*
+      浮动元素不能采用此方式居中
+       height: 48px;
+      width: 166px;
+      margin: 0 auto; 
+      */
+      /* 水平居中 */
+      text-align: center;
+      /* 垂直居中 */
+      line-height: 48px;
+      font-weight: bolder;
+    }
+    .box02:hover{
+      background-color: #3F3F3F;
+      color: #DCDBD7;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="box01">
+    <a href="#"><div class="box02"><p>HTML/CSS</p></div></a>
+    <a href="#"><div class="box02"><p>Browser Side</p></div></a>
+    <a href="#"><div class="box02"><p>Server Side</p></div></a>
+    <a href="#"><div class="box02"><p>Programming</p></div></a>
+    <a href="#"><div class="box02"><p>XML</p></div></a>
+    <a href="#"><div class="box02"><p>Web Building</p></div></a>
+    <a href="#"><div class="box02"><p>Reference</p></div></a>
+  </div>
+</body>
+</html>

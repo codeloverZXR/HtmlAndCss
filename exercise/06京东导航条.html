@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 引入字体图标 -->
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: aqua;
+    }
+
+    a {
+      text-decoration: none;
+      color: #999;
+      font-size: 12px;
+      font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "宋体", sans-serif;
+      /* 垂直居中 */
+      line-height: 30px;
+    }
+
+    a:hover {
+      color: red;
+    }
+
+    .top {
+      height: 30px;
+      background-color: #E3E4E5;
+      /* box-shadow: 0 1px 1px rgba(0, 0, 0, .1); */
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+    }
+
+    .tabbar {
+      /* position: relative; */
+      width: 990px;
+      margin: 0 auto;
+    }
+
+    /* 解决tabbar高度塌陷 */
+    .tabbar::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* 设置公共类样式 */
+    .flt {
+      float: left;
+      height: 30px;
+      /* 文本水平居中 */
+      text-align: center;
+      margin-right: 10px;
+    }
+
+   .showing {
+      width: 81px;
+    }
+
+    /* 添加前竖线*/
+    .flt::before {
+      content: '|';
+      font-size: 10px;
+      margin-right: 7px;
+      color: #999;
+      line-height: 30px;
+    }
+
+    .location {
+      float: left;
+      width: 50px;
+      height: 30px;
+      text-align: center;
+      margin-right: 260px;
+    }
+
+    .location-hidden {
+      width: 400px;
+      height: 300px;
+      background-color: #FFFFFF;
+      display: none;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+    }
+
+    .location:hover {
+      background-color: #FFFFFF;
+      border: 1px  #999 solid;
+    }
+
+    .location:hover a {
+      color: red;
+    }
+
+    .location:hover .location-hidden {
+      display: block;
+      position: relative;
+      z-index: 999;
+    }
+
+    .hidden {
+      width: 200px;
+      height: 200px;
+      background-color: #FFFFFF;
+      display: none;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+      margin-top: -2px;
+      margin-left: -100px;
+      /* border: 1px solid #FFFFFF; */
+    }
+
+    .showing:hover {
+      background-color: #FFFFFF;
+      border: 1px  #999 solid;
+    }
+    
+    .showing:hover a {
+      color: red;
+    }
+    /* 去掉|显示 */
+    .showing:hover.flt::before{
+      display: none;
+    }
+    .showing:hover .hidden {
+      display: block;
+      position: relative;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+    <div class="tabbar">
+      <div class="location">
+        <i class="iconfont" style="color: red;">&#xe600;</i>
+        <a href="javascript:;">山东</a>
+        <div class="location-hidden"></div>
+      </div>
+
+      <div class="myshopping flt">
+        <a href="javascript:;">我的订单</a>
+      </div>
+
+      <div class="myjingdong flt showing">
+        <a href="javascript:;">我的京东</a>
+        <i class="iconfont" style="color: #999;">&#xe651;</i>
+        <div class="hidden"></div>
+      </div>
+
+      <div class="jingdongvip flt">
+        <a href="javascript:;">京东会员</a>
+      </div>
+
+      <div class="qiyeshopping flt showing">
+        <a href="javascript:;">企业采购</a>
+        <i class="iconfont" style="color: #999;">&#xe651;</i>
+        <div class="hidden"></div>
+      </div>
+
+      <div class="cstmservice flt showing">
+        <a href="javascript:;">客户服务</a>
+        <i class="iconfont" style="color: #999;">&#xe651;</i>
+        <div class="hidden"></div>
+      </div>
+
+      <div class="webnavigation flt showing">
+        <a href="javascript:;">网站导航</a>
+        <i class="iconfont" style="color: #999;">&#xe651;</i>
+        <div class="hidden"></div>
+      </div>
+
+      <div class="phonejd flt">
+        <a href="javascript:;">手机京东</a>
+      </div>
+
+      <div class="webhelp flt">
+        <a href="javascript:;">网站无障碍</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

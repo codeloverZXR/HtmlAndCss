@@ -1,0 +1,50 @@
+// less中的单行注释，注释中的内容不会被解析到css中
+/*
+  css中的注释，内容会被解析到css中去
+*/
+// 层级关系
+.box01{
+  width: 500px;
+  height: 500px;
+  border: 10px red solid;
+  .box02{
+    width: 300px;
+    height: 300px;
+    border: 1px black solid;
+    background-color: aqua;
+    .box04{
+      width: 100px;
+      height: 100px;
+      border: 1px gold solid;
+      background-color: bisque;
+    }
+  }
+  .box03{
+    border: 1px green solid;
+    width: 50px;
+    height: 50px;
+  }
+}
+//变量引用
+//在变量中可以储存一个任意值
+// 我们可以在需要时任意修改这个变量值，这样方便对一样的属性进行统一管理
+// 语法：@变量名:变量值;
+// 变量创建
+@a:200px;
+@b:#bfa;
+@c:box05;
+@d:img;
+
+.box06{
+  // 使用变量时，如果直接使用则以 @变量名 的形式声明即可
+  width: @a;
+  height: @a;
+  background-color: @b;
+}
+//作为类名，或者该变量值只作为一部分内容时则必须以@{变量名}的形式使用
+.@{c}{
+  width: @a;
+  height: @a;
+  background-image: url('../@{d}/123.jpg');
+  // background-image: url('../img/123.jpg');
+}

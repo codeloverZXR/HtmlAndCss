@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    可以将一个表格分成三个部分：
+      头部 thead  也可以在thead部分的tr标签中引入th表格专指头部专用单元格
+      主体 tbody
+      底部 tfoot
+    这样要更新哪个部分就会很方便
+   -->
+   <table border>
+     <thead>
+       <tr>
+          <th>日期</th>
+          <th>收入</th>
+          <th>支出</th>
+          <th>合计</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>2000.1.1</td>
+         <td>800</td>
+         <td>200</td>
+         <td>600</td>
+       </tr>
+       <tr>
+        <td>2000.1.1</td>
+        <td>800</td>
+        <td>200</td>
+        <td>600</td>
+      </tr>
+      <tr>
+        <td>2000.1.1</td>
+        <td>800</td>
+        <td>200</td>
+        <td>600</td>
+      </tr>
+      <tr>
+        <td>2000.1.1</td>
+        <td>800</td>
+        <td>200</td>
+        <td>600</td>
+      </tr>
+     </tbody>
+     <tfoot>
+       <tr>
+         <td colspan="2">总收入</td>
+         <td colspan="2">总支出</td>
+       </tr>
+     </tfoot>
+   </table>
+</body>
+</html>

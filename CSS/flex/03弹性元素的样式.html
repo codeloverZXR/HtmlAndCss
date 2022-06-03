@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    ul{
+      width: 600px;
+      border: 5px black solid;
+      display: flex;
+    }
+    ul li{
+      height: 100px;
+      line-height: 100px;
+      width: 100px;
+      text-align: center;
+      font-size: 20px;
+      /* 
+      flex-grow 弹性增长系数（按比例分配原则，默认值为0，不增长）
+      flex-shrink 弹性元素的缩减系数
+            -缩减系数的计算方式比较复杂
+            -缩减多少是根据缩减系数 和 元素自身大小来计算的
+            -默认值为1 每个元素均匀缩减
+      flex-basis 指定元素在主轴上的基础长度
+        如果主轴是横向的，则该值指定的是元素的宽度
+        如果主轴是纵向的，则该值指定的是元素的高度
+        默认值为 auto ，表示参考元素自身的高度或宽度
+        如果传递了一个具体的值，则以该值为主
+      flex 可以同时设置弹性元素上述所有样式
+        flex 增长系数 弹性系数 基础长度
+          initial  0 1 auto 无增长 有伸缩
+          auto     1 1 auto 可增长 可伸缩
+          none     0 0 auto 无弹性
+      */
+    }
+    ul > li:nth-child(1){
+      background-color: aqua;
+      flex: a;
+    }
+    ul > li:nth-child(2){
+      background-color: red;
+    }
+    ul > li:nth-child(3){
+      background-color: gold;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</body>
+</html>

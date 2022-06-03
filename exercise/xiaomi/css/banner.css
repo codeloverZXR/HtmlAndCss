@@ -1,0 +1,93 @@
+.banner-main {
+  background-color: aqua;
+  width: 1226px;
+  height: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+/* 设置图片幻灯片 */
+.banner-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* 将所有图片摞到一起 */
+  position: absolute;
+  transition-property: z-index;
+  transition-duration: 3s;
+}
+
+.banner-img img{
+  width: 100%;
+  height: 100%;
+}
+/* 设置图片幻灯片导航 */
+.img-nav {
+  width: 400px;
+  height: 21px;
+  position: absolute;
+  z-index: 999;
+  bottom: 20px;
+  right: 30px;
+}
+
+.img-nav a {
+  position: relative;
+  z-index: 999;
+  width: 6px;
+  height: 6px;
+  border: 2px #A3A8AF solid;
+  border-radius: 50%;
+  margin: 0 4px;
+  background-color: #67513C;
+  float: left;
+}
+.img-nav a:first-child{
+  margin-left: 292px;
+}
+.img-nav a:hover{
+  background-color: #E8E9F7;
+}
+/* 设置上一张下一张箭头 */
+.beforeimg{
+  width: 41px;
+  height: 69px;
+  position: absolute;
+  z-index: 999;
+  /* background-color: red; */
+  left: 234px;
+  top: 200px;
+  text-align: center;
+  line-height: 69px;
+}
+.nextimg{
+  width: 41px;
+  height: 69px;
+  position: absolute;
+  z-index: 999;
+  /* background-color: red; */
+  left: 1185px;
+  top: 200px;
+  text-align: center;
+  line-height: 69px;
+}
+/* 设置图标大小 */
+.banner-main .iconfont{
+  font-size: 45px;
+  color: rgba(0, 0, 0, .3);
+}
+/* 设置鼠标移入效果 */
+.beforeimg:hover
+,.nextimg:hover{
+  background-color: rgba(0, 0, 0, .3);
+}
+.beforeimg:hover .iconfont
+,.nextimg:hover .iconfont{
+  color: white;
+}
+/* js为活跃img添加active类 */
+.imgactive{
+  z-index: 99;
+}
+.aactive{
+  background-color: #E8E9F7 !important;
+}

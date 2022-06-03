@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer{
+      width: 300px;
+      /* 
+      父元素的height若不设置任何值默认会被子元素的height撑开
+      子元素是在父元素的内容区中排列的
+      若设置的父元素height小于子元素的height，则子元素会发生溢出
+      使用overflow属性来设置父元素处理子元素的溢出问题
+      可选值：
+        visible 默认值，子元素会从父元素中溢出，在父元素外部的位置显示
+        hidden 溢出内容将会被裁剪隐藏，不会被显示
+        scroll 添加水平和垂直方向的滚动条，溢出内容可以通过翻动滚动条来显示
+        auto 根据需要来显示滚动条
+      
+      overflow-x:
+      overflow-y:
+      */
+      height: 300px;
+      background-color: aqua;
+  
+      border: 10px red solid;
+    
+    }
+    .inner{
+      width: 200px;
+      height: 305px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+
+    </div>
+  </div>
+</body>
+</html>

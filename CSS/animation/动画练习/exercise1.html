@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+
+    }
+    .box01{
+      margin: 100px auto;
+      width: 40px;
+      height: 48px;
+      background-color: aqua;
+      background-image: url(./img/ex01.png);
+      /* position: relative; */
+      animation: test 1s steps(10) infinite;
+      /* background-position: -400px, 0px; */
+      background-position: 0px,0px;
+      
+    }
+    @keyframes test {
+      from{
+        background-position: 0px 0px;
+      }
+      to{
+        background-position: -400px 0px;
+      }
+    }
+    .box02{
+      width: 150px;
+      height: 223px;
+      background-image: url('./img/ex02.jpeg');
+      /* background-position: -450px 0px; */
+      animation: runingman 0.5s steps(3) infinite ;
+    }
+    @keyframes runingman{
+      from{
+        background-position: 0 0;
+      }
+      to{
+        background-position: -450px 0;
+      }
+    }
+    .box03{
+      height: 60px;
+      width: 44px;
+      background-image: url('./img/ex04.jpeg');
+      /* background-position: 0px 180px; */
+      animation: qilongzhu 3s infinite steps(13);
+      margin: 0px auto;
+    }
+    @keyframes qilongzhu {
+      from{
+        background-position: 0px -120px;
+      }
+      to{
+        background-position: -570px -120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box01"></div>
+  <div class="box02"></div>
+  <div class="box03"></div>
+</body>
+</html>

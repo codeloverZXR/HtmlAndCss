@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 创建钟表框 */
+    .box01{
+      width: 400px;
+      height: 400px;
+      background-color: aqua;
+      border-radius: 50%;
+      margin: 100px auto;
+      background-image: url(./img/timerbg.jpg);
+      background-size: cover;
+      position: relative;
+    }
+    .box01 > div{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .hour-wrapper{
+      width: 50%;
+      height: 50%;
+      animation: run 3600s linear infinite;
+    }
+    .hour{
+      width: 5px;
+      height: 50%;
+      background-color: black;
+      margin: 0 auto;
+    }
+    .min-wrapper{
+      width: 70%;
+      height: 70%;
+      animation: run 600s steps(60) infinite;
+    }
+    .min{
+      width: 4px;
+      height: 50%;
+      background-color: black;
+      margin: 0 auto;
+    }
+    .sec-wrapper{
+      width: 80%;
+      height: 80%;
+      animation: run 10s steps(60) infinite;
+    }
+    .sec{
+      width: 3px;
+      height: 50%;
+      background-color: red;
+      margin: 0 auto;
+    }
+    @keyframes run {
+      from{
+        transform: rotateZ(0);
+      }
+      to{
+        transform: rotateZ(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box01">
+    <!-- 设置时针 -->
+    <div class="hour-wrapper">
+      <div class="hour"></div>
+    </div>
+    <!-- 设置分针 -->
+    <div class="min-wrapper">
+      <div class="min"></div>
+    </div>
+    <!-- 设置秒针 -->
+    <div class="sec-wrapper">
+      <div class="sec"></div>
+    </div>
+  </div>
+</body>
+</html>

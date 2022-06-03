@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .ul1 {
+      width: 800px;
+      /* height: 100px; */
+      list-style: none;
+      border: 5px black solid;
+      /* 开启弹性布局 */
+      display: flex;
+      /* flex-wrap: wrap-reverse; */
+      justify-content: space-evenly;
+      /* flex-direction: row-reverse; */
+      /* 
+    -主轴布局：
+      justify-content
+        如何分配主轴上的空白空间 / 主轴上的元素分配
+        可选值：
+          flex-start 子元素沿着主轴起边排列
+          flex-end 子元素沿着主轴终边排列
+          center 所有子元素居中排列
+          space-around 空白分布到每个子元素两侧
+          space-between 空白均匀分布到元素间
+          space-evenly 空白分布到元素单侧（注意兼容性问题）
+      */
+    }
+
+    .ul1 li {
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      font-size: 30px;
+      line-height: 100px;
+      /*关闭弹性元素自动等比例收缩  */
+      /* flex-shrink: 0; */
+
+    }
+
+    .ul1>li:nth-child(1) {
+      background-color: aquamarine;
+    }
+
+    .ul1>li:nth-child(2) {
+      background-color: red;
+    }
+
+    .ul1>li:nth-child(3) {
+      background-color: blue;
+    }
+
+    .ul2 {
+      margin-top: 100px;
+      width: 400px;
+      height: 500px;
+      display: flex;
+      list-style: none;
+      border: 5px solid black;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      align-content:flex-start;
+     
+      
+      /* 
+      辅线上的布局：
+      注意：若换行会将元素分成两个小堆
+      align-items: ;
+        -元素在辅轴上如何对齐(关注点在每一行的子元素在辅线上的布局)
+        -元素间的关系
+            可选值：
+            stretch 默认值，若不指定子元素高度，会将每一行子元素的高度设置为相同的值
+            flex-start 子元素不会拉伸，沿着辅轴起边对齐
+            flex-end 子元素沿着辅轴终边对齐
+            center 子元素居中对齐
+            baseline 子元素沿着基线对齐
+      align-content:
+        -辅轴上空白空间的分配（关注点在所有的子元素在辅线上的布局）
+         可选值：
+          flex-start 所有子元素沿着辅轴起边排列
+          flex-end  所有子元素沿着辅轴终边排列
+          center 所有子元素居中排列
+          space-around 空白分布到每个子元素上下侧
+          space-between 空白均匀分布到元素间
+          space-evenly 空白分布到元素单侧（注意兼容性问题）
+      */
+    }
+
+    .ul2 li {
+      /* 用来覆盖当前元素上的align-items */
+      /* align-self: ; */
+      width: 200px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 30px;
+      flex-shrink: 0;
+     
+      
+    }
+
+    .ul2>li:nth-child(1) {
+      background-color: aquamarine;
+      height: 50px;
+    }
+
+    .ul2>li:nth-child(2) {
+      background-color: red;
+    }
+
+    .ul2>li:nth-child(3) {
+      background-color: blue;
+    }
+    .ul2>li:nth-child(4) {
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="ul1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <ul class="ul2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+
+</html>

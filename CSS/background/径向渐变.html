@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 300px;
+      height: 300px;
+      background-image: radial-gradient(100px 100px at 100px 0px,red,yellow);
+    }
+    /* 
+      background-image: radial-gradient()可以为元素添加径向渐变的背景色（放射性的效果）
+      默认情况下，径向渐变的形状是根据元素自身的形状来计算的
+        正方形 --> 圆形
+        长方形 -->椭圆形
+        - 可以手动指定径向渐变的大小
+        指定数值：宽度值 高度值
+        指定值：
+        circle  圆形
+        ellipse 椭圆
+        closest-side 近边
+        closest-corner 近角
+        farthest-side 远边
+        farthest-corner 远角
+
+        - 指定渐变的开始位置
+        指定数值：水平位置（x） 垂直位置（y）
+        指定值：top right left center bottom
+      各属性声明位置：
+         background-image: radial-gradient(大小 at 位置, 颜色1 位置, 颜色2 位置, 颜色3 位置...)
+         大小和位置可以省略
+    */
+  </style>
+</head>
+<body>
+  <div class="box01">
+
+  </div>
+</body>
+</html>

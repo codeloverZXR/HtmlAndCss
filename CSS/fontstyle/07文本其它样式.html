@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      text-decoration 设置文本修饰
+        可选值：
+          none 什么都没有
+          underline 下划线
+          line-through 删除线
+          overline 上划线    
+    */
+    .box01{
+      width: 800px;
+      border: 1px red solid;
+      /* text-decoration: underline; */
+      /* 新增语法:为下划线设置样式 */
+      text-decoration: underline 3px rgb(25, 213, 65) dotted;
+    }
+    .box02{
+      border: 1px red solid;
+      /* 
+       white-space 设置该元素如何处理空白
+        可选值：
+              normal 正常（换行）
+              nowrap 不换行
+              pre 保留空白
+      */
+      /* 实现多余文本用省略号 */
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box01">疫情反复下，线下门店骤停，物流仓储发货难，在种种困局面前，大部分企业应对疫情、挽回线下损失的策略是“从线上找弥补”，直播带货似乎成为很多电商企业最后的救命稻草。
+    然而，直播带货行业的变动却在继续，回归理性之后的直播平台，4月1号，淘宝规则发布的《MCN机构管理规范》，此次规则变更于2022年4月8日正式生效。</div>
+
+  <div class="box02">
+    疫情反复下，线下门店骤停，物流仓储发货难，在种种困局面前，大部分企业应对疫情、挽回线下损失的策略是“从线上找弥补”，直播带货似乎成为很多电商企业最后的救命稻草。
+    然而，直播带货行业的变动却在继续，回归理性
+  </div>
+</body>
+
+</html>

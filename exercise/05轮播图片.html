@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box01 {
+      width: 590px;
+      height: 470px;
+      background-color: aqua;
+      margin: 100px auto;
+      position: relative;
+    }
+
+    img {
+      width: 590px;
+      height: 470px;
+    }
+
+    .showimgs {
+      position: absolute;
+    }
+
+    .moving {
+      position: absolute;
+      width: 160px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      margin: 430px auto;
+    }
+
+    .moving a {
+      background-color: #D4BEA4;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      float: left;
+      margin-left: 5px;
+    }
+
+    .moving a:hover {
+      background-color: white;
+      outline: 3px rgba(0, 0, 0, .5) solid;
+    }
+
+    .activea {
+      background-color: white !important;
+      outline: 3px rgba(0, 0, 0, .5) solid;
+    }
+
+    .activeimg {
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box01">
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/1.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/2.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/3.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/4.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/5.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/6.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/7.webp" alt=""></a></div>
+    <div class="showimgs"><a href="javascript:;"><img src="./jingdongimg/8.webp" alt=""></a></div>
+    <div class="moving">
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+      <a class="movea" href="javascript:;"></a>
+    </div>
+  </div>
+  <script>
+    console.log('hello')
+    const showimgs = document.getElementsByClassName('showimgs')
+    const movea = document.getElementsByClassName('movea')
+    let index = 0;
+    let timer = setInterval(() => {
+      for (let j = 0; j < showimgs.length; j++) {
+        showimgs[j].classList.remove('activeimg')
+        movea[j].classList.remove('activea')
+      }
+      movea[index].classList.add('activea')
+      showimgs[index].classList.add('activeimg')
+      index++
+      if (index == movea.length) {
+        index = 0
+      }
+    }, 1000)
+    for (let i = 0; i < movea.length; i++) {
+      movea[i].onmousemove = function () {
+        //清除自动轮播
+        clearInterval(timer)
+        //清除所有元素的activeimg类
+        for (let j = 0; j < showimgs.length; j++) {
+          showimgs[j].classList.remove('activeimg')
+          movea[j].classList.remove('activea')
+        }
+        //为移入元素添加activeimg类
+        showimgs[i].classList.add('activeimg')
+        //将index的值改为 i + 1
+        index = i + 1
+      }
+      movea[i].onmouseout = function () {
+        timer = setInterval(() => {
+          for (let j = 0; j < showimgs.length; j++) {
+            showimgs[j].classList.remove('activeimg')
+            movea[j].classList.remove('activea')
+          }
+          movea[index].classList.add('activea')
+          showimgs[index].classList.add('activeimg')
+          index++
+          if (index == movea.length) {
+            index = 0
+          }
+        }, 1000)
+      }
+    }
+  </script>
+</body>
+
+</html>

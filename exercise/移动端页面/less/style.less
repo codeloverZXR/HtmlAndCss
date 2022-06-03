@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+// 创建一个变量存储设计图宽度
+@uiwidth:750px;
+// vw适配
+html{
+  // 1rem = 5.3333vm = 40px设计图
+  font-size: 100vw / @uiwidth * 40;
+  // font-family: Microsoft yahei;
+}
+a{
+  display: block;
+  text-decoration: none;
+}
+body{
+  background-color: #EFF0F4;
+  padding: 2rem 0.75rem 2rem 0.75rem;
+  .wrapper{
+    .topnav{
+      // 开启弹性容器
+      display: flex;
+      justify-content: space-between;
+      font-size:1.25rem;
+      color: #24253D;
+      .iconfont{
+        font-size: 1.25rem;
+        color: #999999;
+      }
+    }
+  }
+  .main-img{
+    width: 100%;
+    // height: 7rem;
+    img{
+      margin-top: 1.5rem;
+      width: 100%;
+      height: 7rem;
+      vertical-align: top;
+    }
+  }
+  .items{
+    // 开启弹性布局
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item{
+      width: 10.4rem;
+      height: 3rem;
+      border-radius: 5px;
+      line-height: 3rem;
+      margin-top: 1rem;
+      font-size: 1rem;
+      color: #FFFFFF;
+      .iconfont{
+        padding: 0 (25/40rem) 0 (38/40rem);
+        font-size: 1.25rem;
+        color: #FFFFFF;
+       
+      }
+    }
+    &>.item:nth-child(1){
+      background-color: #F97053;
+    }
+    &>.item:nth-child(2){
+      background-color: #C657FF;
+    }
+    &>.item:nth-child(3){
+      background-color: #FF3971;
+    }
+    &>.item:nth-child(4){
+      background-color: #1D92FF;
+    }
+  }
+  .showing-wrapper{
+    .showing-top{
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+      margin: 1.375rem 0;
+      a{
+        color: #656565;
+      }
+    }
+    .showing-bottom{
+      display: flex;
+      overflow: auto;
+      
+      .showitem{
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        padding: 0.6rem;
+        width: 8.8rem;
+        height: 8.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-shrink: 0;
+        margin-right: 10px;
+        p{
+          font-size: 1.1rem;
+          // line-height: 1.875rem;
+        }
+        a{
+          float: left;
+          color: #979595;   
+          // line-height: 1rem; 
+          img{
+            width: 1rem;
+            height: 1rem;
+            vertical-align: top;
+          }
+        }
+       &>img{
+          width:100%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}

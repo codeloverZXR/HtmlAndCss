@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+      样式的冲突
+          -当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时就会发生样式冲突
+
+      发生样式冲突时，应用哪个样式由选择器的优先级所决定
+
+      选择器的权重
+        内联样式               1,0,0,0
+        id选择器               0,1,0,0 
+        类和伪类选择器          0,0,1,0
+        元素选择器              0,0,0,1
+        通配选择器              0,0,0,0
+        继承的样式              没有优先级
+
+        比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示
+        注意：分组选择器是分别单独对每个选择器的优先级进行计算的 如：div,#box01,span,.class1{}
+        选择器优先级的累加不会超过其最大的数量级 如：类选择器累加再多其优先级也不会超过一个id选择器的优先级
+        如果优先级累加计算后相同，则优先使用靠下写的样式
+
+       慎用！！！:可以在某个样式的后面添加!important 声明字样，则该样式的优先级会比内联样式还要高
+    */
+  </style>
+</head>
+<body>
+  
+</body>
+</html>

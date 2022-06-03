@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="imgs/iconfont/iconfont.css">
+  <style>
+    .box01{
+      width: 200px;
+      height: 200px;
+      background-image: url('./imgs/imgpng/爱心.png');
+    }
+    .box01:hover{
+      background-image: url('./imgs/imgpng/爱心\(1\).png');
+    }
+/* 
+
+      解决图片闪烁问题：
+        可以将多个小图片统一保存到一个大图片中，然后通过调整background-position来显示
+        这样图片会同时加载到页面中，就可以有效的避免出现闪烁的问题
+        这个技术在网页中应用十分广泛，被称为css-sprite，称之为雪碧图
+      
+      雪碧图的使用步骤：
+        1.先确定要使用的图标
+        2.测量图标的大小
+        3.根据测量结果创建一个元素
+        4.将雪碧图设置为元素的背景图片
+        5.设置一个偏移量以显示正确的图片
+
+      雪碧图的特点：
+        一次性将多个图片加载进页面，降低请求的次数，加快访问速度，提升用户的体验
+*/
+    .box02{
+      width: 200px;
+      height: 200px;
+      background-image: url('./imgs/xuebitu/love.jpg');
+      background-position: 200px 20px;
+     
+    }
+    .box02:hover{
+      background-image: url('./imgs/xuebitu/love.jpg');
+      background-position: 0 0;
+    }
+
+    .box03{
+      width: 200px;
+      height: 200px;
+      font-size: 200px;
+    }
+ 
+  </style>
+</head>
+<body>
+  <!-- 引入图标的三种方法 -->
+  <!-- 01通过背景图
+    问题：第一次加载时会闪烁 
+  -->
+  <div class="box01"></div>
+  <!-- 02通过雪碧图 -->
+  <div class="box02"></div>
+  <!-- 03通过图标字体 -->
+  <div class="box03 iconfont">&#xe8ab;</div>
+  
+</body>
+</html>

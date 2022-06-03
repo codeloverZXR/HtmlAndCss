@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      width: 1210px;
+      /* height: 800px; */
+      background-color: #E8E7E3;
+      /* 设置为弹性盒 */
+      display: flex;
+      margin: 50px auto;
+    }
+    li{
+      list-style: none;
+      /* 所有弹性元素等比例划分父元素多余宽度 */
+      flex-grow: 1;
+    }
+    li:hover{
+      background-color: #3F3F3F;
+      color: #E2E1DD;
+    }
+    li a{
+      display: block;
+      text-align: center;
+      line-height: 48px;
+      text-decoration: none;
+      color: #787878;    
+    }
+    
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="javascript:;">HTML/CSS</a></li>
+    <li><a href="javascript:;">Browser Side</a></li>
+    <li><a href="javascript:;">Server Side</a></li>
+    <li><a href="javascript:;">Programming</a></li>
+    <li><a href="javascript:;">XML</a></li>
+    <li><a href="javascript:;">Web Building</a></li>
+    <li><a href="javascript:;">Reference</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+    font属性可以直接设置字体相关的很多样式
+      语法：
+        font:(normal) (normal) 字体大小(/行高默认值) 字体族
+           括号内容可以不写，如不指明则默认使用括号内部的值
+        这两个normal指的是这两个属性（无关顺序）
+          -font-weight 字重 字体的加粗
+            可选值：
+              normal 默认值
+              bold 加粗
+              100 - 900 九个级别（没什么作用，很少有人在电脑安装九种粗细的相同字体）
+          
+          -font-style 字体的风格
+            可选值：
+              normal 正常值
+              italic 斜体
+    */
+    div{
+      font: bold italic 20px/100px 楷体;
+      border: 10px solid red;
+    }
+  </style>
+</head>
+<body>
+  <div>hello</div>
+</body>
+</html>

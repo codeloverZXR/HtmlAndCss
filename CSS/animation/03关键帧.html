@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 700px;
+      height: 800px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-bottom: 10px black solid;
+    }
+    .box02{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: aqua;
+      animation: ballmove 3s infinite ease-in;
+    }
+    @keyframes ballmove {
+      0%{
+        margin-top: 0px;
+      }
+      20%{
+        margin-top: 700px;
+        animation: ballmove 2.5s ease-out;
+      }
+      40%{
+        margin-top: 400px;
+        animation: ballmove 2s ease-in;
+      }
+      60%{
+        margin-top: 700px;
+        animation: ballmove 1.5s ease-out;
+
+      }
+      70%{
+        margin-top: 500px;
+        animation: ballmove 1.3s ease-in;
+      }
+      80%{
+        margin-top: 700px;
+        animation: ballmove 1s ease-out;
+      }
+      90%{
+        margin-top: 600px;
+        animation: ballmove 0.5s ease-in;
+      }
+      100%{
+        margin-top: 700px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box01">
+    <div class="box02">
+
+    </div>
+  </div>
+</body>
+</html>

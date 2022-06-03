@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F4F4F4;
+}
+
+/* 清除li默认样式 */
+li {
+  list-style: none;
+}
+
+/* 解决高度塌陷 */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.top-tabbar {
+  background-color: #E3E4E5;
+  /* 设置所有文字垂直居中 */
+  line-height: 30px;
+  border-bottom: 1px #DDDDDD solid;
+  font-size: 12px;
+  font-family: Microsoft YaHei, Heiti SC, tahoma, arial, Hiragino Sans GB, "宋体", sans-serif;
+  ;
+  color: #999999;
+}
+
+/* 设置字体图标大小 */
+.iconfont {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+.top-tabbar a {
+  text-decoration: none;
+  color: #999999;
+}
+
+.top-tabbar a:hover {
+  color: #F10215;
+}
+
+.main-bar {
+  width: 990px;
+  /* background-color: red; */
+  margin: 0 auto;
+}
+
+/* 地点 */
+.location {
+  float: left;
+}
+
+.location .iconfont {
+  font-size: 14px;
+}
+
+.location-text {
+  padding: 0 8px;
+}
+
+.locationhidden {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  display: none;
+}
+
+.location:hover .location-text {
+  background-color: white;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, .3);
+}
+
+.location:hover .locationhidden {
+  display: block;
+  position: absolute;
+  z-index: 999;
+}
+
+/* 服务列表 */
+.list {
+  float: right;
+}
+
+.list li {
+  float: left;
+}
+
+.dad-div {
+  padding: 0 6px;
+}
+
+.lihidden {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  display: none;
+}
+
+.dad:hover .dad-div {
+  background-color: white;
+  position: relative;
+  z-index: 9999;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, .3);
+}
+
+.dad:hover .lihidden {
+  display: block;
+  position: absolute;
+  z-index: 999;
+}
+
+/* 设置竖线 */
+.line {
+  width: 1px;
+  height: 10px;
+  margin: 10px 10px 0 10px;
+  background-color: #CCCCCC;
+}
+.line-change{
+  margin: 10px 10px 0 4px;
+}

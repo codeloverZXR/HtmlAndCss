@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 500px;
+      height: 500px;
+      background-color: #bfa;
+      background-image: url('./img//01.png');
+      /* background-repeat: no-repeat; */
+      border: 10px red double;
+      padding: 10px;
+      /* background-clip: content-box; */
+      background-origin: border-box;
+      
+      /* 设置背景的显示范围
+            默认情况下，背景是可以沿着padding和border自动延伸的
+            background-clip 背景(背景颜色+图片)裁剪
+                可选值：
+                    border-box 默认值，背景会在padding和border处延伸
+                    padding-box 背景只会在padding处延伸
+                    content-box 背景既不会在padding处延伸也不会在border处延伸，只会在内容区中显示
+            
+            background-origin 规定背景图片的偏移量计算原点（规定background-position的计算原点）
+                可选值
+                    padding-box默认值，background-position从内边距处开始计算
+                    content-box 背景图片的偏移量从内容区开始计算
+                    border-box 背景图片的偏移量从边框处开始计算
+              
+            background-size 设置背景图片的大小
+              第一个值表示宽度
+              第二个值表示高度
+              -如果只写第一个，则第二个值默认是auto（auto会根据图片原始比例自动调整图片大小）
+              cover 图片比例不变，将整个元素铺满
+              contain 图片比例不变，将图片在元素中完整显示
+
+
+          */
+          overflow:scroll;
+    }
+    .box02{
+      width: 500px;
+      height: 1000px;
+      background-color: aqua;
+      background-image: url('./img/123.jpg');
+      /* background-size: 100px auto; */
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      /*   background-attachment 设置背景图片是否会跟随元素移动而移动（常见于滚动条）
+            可选值：
+                scroll 默认值 背景图片会跟随元素移动
+                fixed 背景图片会固定在页面中，不会跟随元素的移动而移动
+           
+           所有背景相关的样式简写：background属性，所有与背景相关的样式都能通过该属性进行设置
+              该属性对属性值没有顺序要求，也没有哪个属性要必须去写
+                注意：
+                  background-size 必须写在background-position后边，并且使用/隔开
+                  如果设置background-origin 和 background-clip 两个样式，orgin要在clip的前面设置
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="box01">
+    <div class="box02">
+        有一个问题很奇怪，频繁出现在灾区一线的韩红，这次为什么没有出现在上海？
+      韩红和基金会背后，是很多娱乐圈明星，代表了明星们对于社会事件的态度，这是一股不可忽略的强大力量。
+      前段时间，韩红和她的基金会为吉林捐赠了物资，解了部分学生的燃眉之急，获得了大量称赞。两年前武汉封城的时候，韩红更是亲赴武汉运送物资，感动了无数网友。
+      而自从上海于3月底“封城”以来，上海疫情已持续了半个多月时间，大量居民需要援助，却一直未见韩红的身影，这是为何呢？
+    </div>
+  </div>
+</body>
+</html>

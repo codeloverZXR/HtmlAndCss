@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fa/css/all.css">
+  <style>
+    li::before{
+      
+      content: '\f1b0';
+      font-family:'Font Awesome 5 Free';
+      font-weight: 900;
+      color: red;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    图标字体（iconfont）
+      -在网页中经常需要使用一些图标，可以通过图片来引入图标
+        但是图片大小本身比较大，并且非常不灵活，放大后往往会出现失真的情况
+      -在使用部分图标时，我们还可以将图标直接设置为字体，通过font-face的方式
+      对图标字体进行引入，这样我们既可以通过font的一些属性对该图标字体进行颜色，
+      大小等样式的修改，而且由于字体属于矢量图，所以无论怎么放大都不会造成失真的现象
+      既便捷，又节省空间
+
+    fontawesome使用步骤
+      1.下载解压
+      2.将css和webfonts移入到项目中
+      3.在网页中引入all.css文件
+      4.使用图标字体：
+              方法一：通过类名引入
+                  class = "fas xxx" 或 class = "fab xxx"
+              方法二：通过伪元素来设置图标字体
+                  1.找到要设置图标的元素，通过::before 或 ::after 选中
+                  2.在content中设置字体的编码
+                  3.设置字体的样式
+                    fab
+                    font-family:'Font Awesome 5 Brands';
+
+                    fas
+                    font-family:'Font Awesome 5 Free'
+                    font-weight: 900;
+              方法三：通过实体来使用图标字体
+                &#x图标的编码;
+   -->
+  <i class="fas fa-bell"></i>
+  <ul>
+    <li>锄禾日当午</li>
+    <li>汗滴禾下土</li>
+  </ul>
+  <span class="fas" style="color: aqua;">&#xf0f3;</span>
+</body>
+</html>

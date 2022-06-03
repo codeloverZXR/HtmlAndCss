@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      /* 
+      内容区（content），元素中所有的子元素和文本内容都在内容区中排列
+          内容区的大小由width 和 height两个属性来设置
+              width ：设置内容区的宽度
+              height ：设置内容区的高度
+      */
+      width: 200px;
+      height: 200px;
+      background-color:red;
+      /* 
+      边框（border），边框属于盒子的边缘部分，边框里面属于盒子的内部而边框外面就是盒子的外部
+        要设置边框，需要至少设置三个样式：
+          -边框的宽度 border-width 
+            默认值：一般浏览器都是3px
+            值的情况：
+                四个值：上 右 下 左（顺时针方向）
+                三个值：上 左右 下
+                两个值：上下 左右
+                一个值：上下左右
+            border-xxx-width
+              xxx可以是 top right bottom left
+              用来单独指定某一个边的宽度
+          -边框的颜色 border-color
+            默认值：自动使用该元素的color样式颜色（而color默认为黑色）
+            值的情况：
+                  与border-width规则一致 都可以指定四个边的颜色 也同样有border-xxx-color
+          -边框的样式 border-style
+            默认值：none 表示没有边框
+            值的情况：
+                  solid 实线
+                  dotted 点状虚线
+                  dashed 虚线
+                  double 双线 
+        设置边框的简写：
+            border简写属性，通过该属性可以同时设置边框所有的相关样式，没有顺序要求
+
+            border-xxx：可以指定每个边的单独样式
+                  border-top
+                  border-right
+                  border-bottom
+                  border-left
+        注：由于边框也是属于盒子的部分，所以设置边框会改变盒子的整体大小
+      */
+      border-width: 10px;
+      border-color: blue;
+      border-style: solid;
+      border: 10px double black;
+      border-right: none;
+    }
+    .box02{
+      width: 200px;
+      height: 200px;
+      border: 10px solid red;
+      background-color: aqua;
+      /* 
+      内边距（padding）
+          内容区和边框之间的距离是内边距
+          一个有四个方向的内边距属性：
+                padding-top
+                padding-right
+                padding-bottom
+                paddding-left
+
+          内边距的设置会影响到盒子的大小
+          背景颜色的设置会延伸到内边距上
+      
+      注：一个盒子的可见框大小由：内容区+内边距+边框 来共同决定
+          计算盒子大小时，需要将这三个区域加到一起进行计算
+      
+      内边距设置的简写：
+          padding属性可以同时为指定的四个方向设置内边距，其规则与border-width属性一致
+      */  
+      /* padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      padding-left: 40px; */
+      padding: 10px 20px 30px 40px;
+    }
+    .box03{
+      /* 
+      注意，这个子元素撑满的是父元素box02的内容区
+      */
+      width: 100%;
+      height: 100%;
+      background-color: gold;
+    }
+
+    .box04{
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      border: 10px solid gold;
+      /* 
+        外边距（margin）
+          外边距的设置不会影响盒子可见框的大小
+          但外边距会影响盒子可见框的具体显示位置
+          一共有四个方向的外边距
+            margin-top
+              -上外边距，设置一个正值，元素会向下移动
+            margin-right
+              -默认情况下设置margin-right不会产生任何效果
+            margin-bottom
+              -下外边距，设置一个正值，其下面的元素会向下移动
+            margin-left
+              -左外边距，设置一个正值，元素会向右移动
+
+            margin也可以设置为负值，如果是负值则元素会向相反的方向移动
+
+          注：元素在页面中是按照自左向右的顺序排列的
+            所以在默认情况下：
+                设置上和左边距，会移动该元素本身
+                而设置下和右边距，则会移动其它元素  
+          margin的简写属性
+              margin属性可以同时设置四个方向的外边距，其用法与padding属性一致
+          
+          margin虽然不会影响盒子的可见框大小，但会影响这个盒子的实际占用空间
+          
+      */
+      margin: 100px;
+    }
+    .box05{
+      width: 220px;
+      height: 220px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+      盒模型，盒子模型，框模型（box model）
+        -css将页面中的所有元素都设置为了一个矩形的盒子
+        -将元素设置为矩形的盒子后，对页面的布局就变成将不同的盒子摆放到不同的位置
+        -每一个盒子都由以下部分组成
+          盒子内（可见框）：
+            内容区（content）
+            内边距（padding）
+            边框（border）
+          盒子外（不可见部分）：
+            外边距（margin）
+
+   -->
+   <div class="box01"></div>
+   <br>
+   <div class="box02">
+     <div class="box03">
+
+     </div>
+   </div>
+   <br>
+   <div class="box04"></div>
+   <div class="box05"></div>
+</body>
+</html>

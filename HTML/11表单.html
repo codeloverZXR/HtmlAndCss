@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 表单：
+          -网页中的表单用于将本地的数据提交给远程服务器
+          -使用form标签来创建一个表单      
+    -->
+  <form action="./target.html">
+    <!-- 属性action用于指明表单将要提交到的服务器地址 -->
+    <!-- 文本框：
+            数据要提到到服务器端，必须要指定一个name属性，数据将会默认以name的值 = xxx的
+            形式发送给服务器端
+            可以设置value来指定默认值
+    -->
+    文本框:<input type="text" name="username" value="默认值">
+    <br>
+    密码框:<input type="password" name="password">
+    <br>
+    单选按钮：
+    <!-- 设置相同的name属性就会变成单选，只能选择其中一个，会以name值 = value值的形式发送给服务器端 
+          checked属性表示默认选中按钮
+    -->
+    <input type="radio" name="rdo" value="a" checked>
+    <input type="radio" name="rdo" value="b">
+    <br>
+    多选框：
+    <input type="checkbox" name="ckx" value="1" checked>
+    <input type="checkbox" name="ckx" value="2">
+    <input type="checkbox" name="ckx" value="3">
+    <br>
+    <!-- 下拉列表 
+      出现选择列表，选择的选项在提交时会以name值 = 选项value值的形式提交 selected表示默认选择
+    -->
+    <select name="slct" id="xiala">
+      <option value="op1">选项一</option>
+      <option value="op2" selected>选项二</option>
+      <option value="op3">选项三</option>
+    </select>
+    <!-- 提交按钮，点击后，会发生数据提交 -->
+    <input type="submit" value="注册">
+  </form>
+</body>
+</html>

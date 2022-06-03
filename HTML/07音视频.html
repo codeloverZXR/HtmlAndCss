@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    audio 标签用来向页面中引入一个外部的音频文件
+          音视频文件引入时，默认情况下是不允许用户自己控制播放停止
+    
+    添加以下属性可实现一些功能：
+          controls 是否允许用户控制播放
+          autoplay 音频文件是否自动播放
+                如果设置了autoplay 则音乐在打开页面时会自动播放
+                但大部分浏览器为了用户体验而会禁用自动播放功能
+          loop 音乐是否循环播放
+   -->
+  <audio src="音频链接路径"></audio>
+  <!-- 除了可以使用src指定外部文件路径还可以通过audio标签
+       嵌套source标签来实现一些兼容问题的解决 -->
+  <audio controls>
+    <!-- 识别.MP3格式的浏览器播放此文件 -->
+    <source src="音频文件.mp3">
+    <!-- 无法识别.MP3格式但能识别.ogg格式的浏览器播放此文件 -->
+    <source src="音频文件.ogg">
+    <!-- IE8及以下用embed标签实现浏览器播放 但需要指明type属性 -->
+    <embed src="音频文件.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- 
+    使用video标签可以向网页中引入一个视频
+    使用方法与audio基本一致
+   -->
+   <video src="视频链接路径"></video>
+   <video controls>
+     <source src="视频文件.mp4">
+     <source src="视频文件.webm">
+     <embed src="" type="video/mp4">
+   </video>
+   <!-- 使用iframe标签可以实现引入其它网页的视频 -->
+</body>
+</html>

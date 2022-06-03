@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box01{
+      width: 200px;
+      height: 200px;
+      /* background-image: linear-gradient(red 0px,yellow 50px,green 100px,#bfa 150px); */
+      background-image: repeating-linear-gradient(red 0px,green 50px);
+      /* background-image: linear-gradient(red 50px,yellow 150px); */
+      /*
+    通过渐变可以设置一些复杂的背景颜色，可以实现从一个颜色向其他颜色过渡的效果
+    ！！渐变是图片，需要通过background-image来设置
+
+    线性渐变，颜色沿着一条直线发生变化
+    linear-gradient()
+    - linear-gradient(red,yellow)红色在开头，黄色在结尾，中间是过渡区域
+      意思是从纯红色向纯黄色发生渐变
+    - 在线性渐变设置颜色的开头，可以设置一些属性值来改变渐变的方向
+              to left 向左发生渐变
+              to right
+              to bottom
+              to top
+              xx deg 默认渐变基础上旋转的度数(默认是180度)
+              xx turn 默认渐变的基础上旋转的圈数
+      - 渐变也可以同时指定多个颜色，多个颜色默认情况下平均分布
+      也可以手动设置渐变的情况:
+               例子：     
+                     background-image: linear-gradient(red 0px,yellow 50px,green 100px,#bfa 150px);
+                  颜色后面的像素是该颜色纯色的位置（自上而下），由此颜色向相邻的颜色发生渐变，
+                  若最上面或最下面的颜色没有设置对应满整个元素高度，则空余的部分会以上下颜色各自的纯色进行填充
+      - repeating-linear-gradient()平铺线性渐变
+                  若最上面或最下面的颜色没有设置对应满整个元素高度，则空余部分会重复该设置的渐变直到铺满整个元素
+      
+      
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="box01"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="target.html">
+    <!-- 
+      input type="text"的补充
+      浏览器会根据name的值自动提示你在此name文本框中之前输入的内容autocapitalize="off"可以关闭自动补全的提示
+      readonly 将表单项设置为只读，数据可以提交
+      disabled 将表单项设置为禁用，数据不可提交
+      autofocus 设置表单项自动获取焦点
+     -->
+    <input type="text" name="username" autocapitalize="off"><br>
+    <input type="text" name="username" value="hello" readonly><br>
+    <input type="text" name="username" value="hello" disabled><br>
+    <input type="text" name="username" autofocus><br>
+    
+    <br>
+    <br>
+    input
+    <!-- 其它类型的表单项 -->
+    <!-- 提交按钮 -->
+    <input type="submit">
+    <!-- 重置按钮 -->
+    <input type="reset">
+    <!-- 普通按钮 -->
+    <input type="button" value="按钮">
+     <br>
+     <br>
+     button
+    <!-- 对比button -->
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+    <button type="button">按钮</button>
+  </form>
+</body>
+</html>
